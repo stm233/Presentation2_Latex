@@ -1,0 +1,91 @@
+\documentclass[10pt,fleqn]{beamer}
+
+\hypersetup{pdfpagemode=FullScreen}
+\beamertemplatenavigationsymbolsempty
+\usetheme{mcgill}
+\DeclareGraphicsExtensions{.jpg,.eps,.png,.pdf,.mps,.gif}
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{lmodern}
+\usepackage[3D]{movie15}
+\usepackage{ragged2e} %文本两端对齐 \justifying
+\usepackage{booktabs} %19-24行 为表格模板所需要的包
+\usepackage{cellspace}
+\usepackage{pgf}
+\usepackage{tikz}
+\setlength\cellspacetoplimit{3pt}
+\setlength\cellspacebottomlimit{3pt}
+\usepackage{makecell}
+\setcellgapes{3pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% color definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gris1}{RGB}{220,220,220}
+\definecolor{gris2}{RGB}{180,180,180}
+\definecolor{couleurtitreslide}{RGB}{220,220,220}
+\definecolor{couleurrouge}{RGB}{210,0,0}
+\definecolor{couleurtexteblock}{RGB}{145,5,5}
+\definecolor{couleurfond}{RGB}{255,255,255}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title page definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercovered{dynamic}
+\setbeamerfont{author}{family=\rmfamily}
+
+\author[authors: Tianma Shen]{authors: Tianma Shen\\[5pt]\scriptsize{University of Shanghai for Science and Technology}}%首页的名字和底部的名字
+\title[Learning Report ]{Learning Report From SEP. TO OCT.}%首页的题目和底部的题目
+\institute{%conference name\\
+\small{}} % 首页中间一行字（被我隐藏有需要可以添加）
+\date[2017.9]{2017.10.13} %首页日期和底部日期
+\titlegraphic{\includegraphics[height=2cm]{logo}}%logo为eps文件，首页logo
+
+% table of contents depth
+\setcounter{tocdepth}{1}
+
+\begin{document}
+	\usebackgroundtemplate{\includegraphics[width=160mm]{McGillBackground}}%背景eps
+	\frame[plain]{\titlepage}
+
+	\part{Main Part}
+	\frame{\frametitle{Outline}\tableofcontents}
+
+	\section{CNN Architecture}%第一标题
+	\subsection{FakeTitle1} % subtitles are not used in this layout but still required for the header outline bullets
+	\input{Architecture//pageArchitecture1}%第一标题第一页，名字在对应tex中修改
+	\input{Architecture//pageInception}
+	\input{Architecture//pageResNet}
+	\input{Architecture//pageResNetBlock}
+	\input{Architecture//pageResNetImprove}
+	\input{Architecture//pageInceptionV3}
+	\input{Architecture//pageInceptionV4}
+	\input{Architecture//pageInceptionResNetV2}
+	\input{Architecture//pageResult}
+	\input{Architecture//pageFractalNet}
+	\input{Architecture//pageDropPath}
+	\input{Architecture//pageDenseNet}
+
+	% \section{Layer-CNN}%第二标题
+	% \subsection{FakeTitle1} % subtitles are not used in this layout but still required for the header outline bullets
+	% \input{page3}
+	% \input{page4}
+	%\section{TensorFlow}
+	%\subsection{FakeTitle1} % subtitles are not used in this layout but still required for the header outline bullets
+	%
+
+	\section{Latex}%第三标题
+	\subsection{FakeTitle1} % subtitles are not used in this layout but still required for the header outline bullets
+	\input{page3}
+	\input{page4}
+
+\end{document}
